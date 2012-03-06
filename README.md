@@ -1,6 +1,8 @@
 Depot Rails Application
 ========================
 
-Live demo at: http://
+Manage your products with this easy application.
+
+Live demo at: http://smooth-galaxy-7006.herokuapp.com/
 
 Developed in 2012 at ZHAW.
