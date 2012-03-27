@@ -1,22 +1,17 @@
-<h1>Product</h1>
+<div class="page-header">
+  <h1><%= @product.title %></h1>
+</div>
 
 <p>
-  <b>Title</b><br>
-  <%= @product.title %>
+  <%= @product.description.html_safe %>
 </p>
 
 <p>
-  <b>Description</b><br>
-  <%= @product.description %>
+  <%= image_tag(@product.image_url) %>
 </p>
 
 <p>
-  <b>Image url</b><br>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <b>Price</b><br>
+  <b>Price:</b>
   <%= @product.price %>
 </p>
 
