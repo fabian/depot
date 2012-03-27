@@ -1,6 +1,11 @@
 <%= form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
   <fieldset>
     <legend><%= controller.action_name.capitalize %> Product</legend>
+    <% if @product.errors.any? %>
+      <% @product.errors.full_messages.each do |msg| %>
+        <div class="alert alert-error"><%= msg %></div>
+      <% end %>
+    <% end %>
 
     <div class="control-group">
       <%= f.label :title, :class => 'control-label' %>
@@ -12,7 +17,7 @@
     <div class="control-group">
       <%= f.label :description, :class => 'control-label' %>
       <div class="controls">
-        <%= f.text_area :description, :class => 'text_area' %>
+        <%= f.text_area :description, :class => 'text_area input-xlarge' %>
       </div>
     </div>
 
