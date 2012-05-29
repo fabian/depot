@@ -54,9 +54,9 @@
             <%= yield %>
           </div>
           <div id="side" class="span4">
-          	<div id="cart">
+      	    <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
               <%= render @cart %>
-            </div>
+            <% end %>
           </div>
         </div>
         
